@@ -179,11 +179,10 @@ window.addEventListener('load', () => {
   displayDate();
 });
 
-const upsellBtn = document.getElementById('book-list');
-
-upsellBtn.addEventListener('click', (event) => {
-  const bookCurrent = event.target.closest('.book');
-  if (bookCurrent !== null && bookCurrent !== undefined) {
+const upsellBtn = document.querySelector('#book-list');
+upsellBtn.addEventListener('click', (e) => {
+  const bookCurrent = e.target.closest('.book');
+  if (e.target.classList.contains('remove-book-btn')) {
     const nodelist = bookCurrent.childNodes;
     const [title, author] = nodelist;
     newBookList.remove(title.innerText, author.innerText);
