@@ -1,4 +1,4 @@
-export const formatDate = () => {
+const formatDate = () => {
   const options = {
     year: 'numeric',
     month: 'long',
@@ -13,4 +13,6 @@ export const formatDate = () => {
   str = str.replace('at', ',');
 
   return str;
-}
+};
+
+export default { formatDate };

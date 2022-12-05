@@ -1,5 +1,5 @@
-import { formatDate } from './modules/formatdate.js';
-import { showBookList, storeInClass, newBookList } from './modules/data.js';
+import formatDate from './modules/formatdate.js';
+import newBookList, { showBookList, storeInClass } from './modules/data.js';
 
 document.getElementById('add_book_btn').addEventListener('click', () => {
   if (document.getElementById('title').value !== '') {
