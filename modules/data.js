@@ -1,9 +1,12 @@
+/* eslint no-func-assign: "error" */
+/* eslint no-class-assign: "error" */
+/* eslint-env es6 */
 
-import { BookList } from '/modules/base.js';
+import BookList from './base.js';
 
-let newBookList = new BookList();
+export let newBookList = new BookList();
 
-function showBookList() {
+export function showBookList() {
   document.getElementById('book-list').innerHTML = '';
 
   if (localStorage.getItem('bookList') !== null) {
@@ -38,7 +41,7 @@ function showBookList() {
   }
 }
 
-function storeInClass() {
+export function storeInClass() {
   const bookList = JSON.parse(localStorage.getItem('bookList'));
 
   if (bookList !== null) {
@@ -52,5 +55,3 @@ function storeInClass() {
     }
   }
 }
-
-export { showBookList,  storeInClass, newBookList };

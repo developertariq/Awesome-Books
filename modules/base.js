@@ -8,7 +8,7 @@ class Book {
   }
 }
 
-class BookList {
+export default class BookList {
   constructor() {
     this.head = null;
   }
@@ -94,5 +94,3 @@ class BookList {
     previous.next = current.next;
   }
 }
-
-export { BookList };

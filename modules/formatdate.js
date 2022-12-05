@@ -1,5 +1,4 @@
-
-function formatDate() {
+export default function formatDate() {
   const options = {
     year: 'numeric',
     month: 'long',
@@ -15,5 +14,3 @@ function formatDate() {
 
   return str;
 }
-
-export { formatDate };
