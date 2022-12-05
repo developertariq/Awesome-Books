@@ -1,4 +1,4 @@
-import formatDate from './modules/formatdate.js';
+import defaultExport from './modules/date.js';
 import newBookList, { showBookList, storeInClass } from './modules/data.js';
 
 document.getElementById('add_book_btn').addEventListener('click', () => {
@@ -13,7 +13,7 @@ document.getElementById('add_book_btn').addEventListener('click', () => {
 window.addEventListener('load', () => {
   showBookList();
   storeInClass();
-  document.querySelector('.current-date').innerHTML = formatDate();
+  document.querySelector('.current-date').innerHTML = defaultExport();
 });
 
 const upsellBtn = document.querySelector('#book-list');

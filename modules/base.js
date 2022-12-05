@@ -73,7 +73,7 @@ export default class BookList {
       count += 1;
       current = current.next;
     }
-    return -1;
+    return - 1;
   }
 
   removeFrom = (index) => {
