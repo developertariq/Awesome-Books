@@ -7,7 +7,7 @@ const displayDate = () => {
     minute: 'numeric',
     second: 'numeric',
   };
-  
+
   const date = new Date();
   let str = date.toLocaleString('en-US', options);
   str = str.replace(',', 'th');
