@@ -6,7 +6,7 @@ import BookList from './base.js';
 
 export let newBookList = new BookList();
 
-export function showBookList() {
+export const showBookList = () => {
   document.getElementById('book-list').innerHTML = '';
 
   if (localStorage.getItem('bookList') !== null) {
@@ -41,7 +41,7 @@ export function showBookList() {
   }
 }
 
-export function storeInClass() {
+export const storeInClass = () => {
   const bookList = JSON.parse(localStorage.getItem('bookList'));
 
   if (bookList !== null) {

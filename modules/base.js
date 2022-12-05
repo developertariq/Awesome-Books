@@ -13,13 +13,13 @@ export default class BookList {
     this.head = null;
   }
 
-  prepend(title, author) {
+  prepend = (title, author) => {
     const newhead = new Book(title, author);
     newhead.next = this.head;
     this.head = newhead;
   }
 
-  add(title, author) {
+  add = (title, author) => {
     const book = new Book(title, author);
     if (this.head === null) {
       this.head = book;
@@ -34,7 +34,7 @@ export default class BookList {
     current.next = book;
   }
 
-  remove(title, author) {
+  remove = (title, author) => {
     if (this.head === null) { return; }
     let current = this.head;
     let previous = null;
@@ -52,7 +52,7 @@ export default class BookList {
     }
   }
 
-  getList() {
+  getList = () => {
     let current = this.head;
     let str = '';
     while (current) {
@@ -62,7 +62,7 @@ export default class BookList {
     return str;
   }
 
-  indexOf(title, author) {
+  indexOf = (title, author) => {
     let count = 0;
     let current = this.head;
 
@@ -76,7 +76,7 @@ export default class BookList {
     return -1;
   }
 
-  removeFrom(index) {
+  removeFrom = (index) => {
     if (this.head === null) { return; }
     let current = this.head;
     if (index === 0) {

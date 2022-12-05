@@ -1,4 +1,4 @@
-import formatDate from './modules/formatdate.js';
+import { formatDate } from './modules/formatdate.js';
 import { showBookList, storeInClass, newBookList } from './modules/data.js';
 
 document.getElementById('add_book_btn').addEventListener('click', () => {
@@ -18,8 +18,8 @@ window.addEventListener('load', () => {
 
 const upsellBtn = document.querySelector('#book-list');
 upsellBtn.addEventListener('click', (e) => {
-  const bookCurrent = e.target.closest('.book');
   if (e.target.classList.contains('remove-book-btn')) {
+    const bookCurrent = e.target.closest('.book');
     const nodelist = bookCurrent.childNodes;
     const [title, author] = nodelist;
     newBookList.remove(title.innerText, author.innerText);
